@@ -3,10 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PatSub Enterprise</title>
+    <title>Luxury eCommerce</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+        }
+        header {
+            padding: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px;
+        }
+        .product {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            width: 250px;
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        button {
+            background: #ff4757;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #e84118;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to PatSub Enterprise!</h1>
-    <p>Jut Enroll yourself to know more about our services.</p>
+    <header>PatSub Enterprise</header>
+    <div class="container">
+        <script>
+            const products = [
+                "Luxury Watch", "Premium Sneakers", "Designer Bag", "Gold Necklace", "Smartphone", "Laptop", "Gaming Console", "Wireless Earbuds", "Leather Wallet", "Silk Scarf", 
+                "Sunglasses", "High-End Perfume", "Luxury Suit", "Diamond Ring", "Elegant Dress", "Premium Headphones", "Handcrafted Shoes", "Fitness Tracker", "Smart TV", "Professional Camera", 
+                "Stylish Handbag", "Vintage Vinyl Player", "Exclusive Wine Set", "Luxury Pen", "Designer Belt"
+            ];
+            
+            products.forEach((product, index) => {
+                document.write(`
+                    <div class="product">
+                        <h2>${product}</h2>
+                        <p>$${(Math.random() * 500 + 50).toFixed(2)}</p>
+                        <button>Add to Cart</button>
+                    </div>
+                `);
+            });
+        </script>
+    </div>
 </body>
 </html>
